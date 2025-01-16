@@ -13,8 +13,7 @@ def send_message(chat_id, text, **kwargs):
     """send text message"""
     payload = {
         "chat_id": chat_id,
-        "text": escape(text),
-        "parse_mode": "MarkdownV2",
+        "text": text,
         **kwargs,
     }
     r = requests.post(f"{TELEGRAM_API}/sendMessage", data=payload)
@@ -27,8 +26,7 @@ def send_imageMessage(chat_id, text, imageID):
     """send image message"""
     payload = {
         "chat_id": chat_id,
-        "caption": escape(text),
-        "parse_mode": "MarkdownV2",
+        "caption": text,
         "photo": imageID
     }
     r = requests.post(f"{TELEGRAM_API}/sendPhoto", data=payload)

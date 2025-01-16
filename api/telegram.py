@@ -1,7 +1,6 @@
 from typing import Dict
 
 import requests
-from md2tgmd import escape
 
 from .config import BOT_TOKEN, defaut_photo_caption, send_message_log, send_photo_log, unnamed_user, unnamed_group
 from .printLog import send_log
